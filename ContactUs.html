@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CMNC Website">
+    <meta name=keywords content="CMNC, City of Manchester, Manchester Netball, Netball training, Training">
+    <!--Title-->
+    <title>ContactUs - City of Manchester</title>
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!--css link-->
+    <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav id="navbar" class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/cmnc-logo.png" alt="CMNC Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="training.html">Training</a>
+                    </li>
+                    <!--Addition of photo gallery link on new page to show club pics, and tournament pics and other photos-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Photo Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1 class="display-3" id="com">City of Manchester Netball Club</h1>
+    </header>
+    <div class="container">
+        <h2 class="display-6">Contact us</h2>
+        <!--Name and contact details for Committee members-->
+        <p>Head Coach - Lisa Rice - Contact number 00000000000</p>
+        <p>Secretary - Jess Laver - Contact number 00000000000</p>
+        <p>Treasurer - Katie Richardson - Contact number 0744 697 2141</p>
+        <!--Contact us form with name, phone, email from, message and positions-->
+        <form class="row g-3" name="myMessageForm" action="" onsubmit="submit_form">
+            <div class="col-lg-4">
+                <label for="your-name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="your-name" placeholder="First and Last name" >
+            </div>
+            <div class="col-lg-4">
+                <label for="phonenumber" class="form-label">Phone number</label>
+                <input type="number" class="form-control" id="phonenumber" placeholder="Phone number" required>
+                <div id="phonenumberHelp" class="form-text">We'll never share your phone number with anyone else.</div>
+            </div>
+            <div class="col-lg-4">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email address" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <label>Please select the Netball positions you are interested in:</label>
+            <div class="page-wrap">
+                <div class="row">
+                    <div class="column">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gs">
+                            <label class="form-check-label" for="gs">
+                                GS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="ga">
+                            <label class="form-check-label" for="ga">
+                                GA
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="wa">
+                            <label class="form-check-label" for="wa">
+                                WA
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="c">
+                            <label class="form-check-label" for="c">
+                                C
+                            </label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="wd">
+                            <label class="form-check-label" for="wd">
+                                WD
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gd">
+                            <label class="form-check-label" for="gd">
+                                GD
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gk">
+                            <label class="form-check-label" for="gk">
+                                GK
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..."
+                    required></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-12">
+                <button id="btnReset" class="btn btn-secondary">Reset</button>
+            </div>
+        </form>
+
+    </div>
+    <br>
+    <!--footer-->
+    <footer>
+        <div class="container" id="comfooter">
+            <p>&copy; 1996 City of Manchester Netball Club. All rights reserved.</p>
+        </div>
+    </footer>
+    <!--JavaScript Link-->
+    <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
