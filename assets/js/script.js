@@ -1,6 +1,9 @@
 //form functionality
 
-//clear form
+//clear form with reset button
+document.getElementById("resetButton").addEventListener("click", function() {
+  document.getElementById("contactForm").reset();
+});
 
 //email details
 
