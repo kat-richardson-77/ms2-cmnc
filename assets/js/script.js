@@ -16,9 +16,19 @@ function validateForm() {
         document.comForm.email.focus();
         return false;
     }
-  // checkbox validation
-  //   if (document.comForm.)
-
+    if(document.comForm.position.length > 0) {
+        let isChecked = false;
+        for(let i = 0; i < document.comForm.position.length; i+= 1) {
+            if(document.comForm.position[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+        if(!isChecked) {
+            window.alert("Please select one or more positions.");
+            return false;
+        }
+    }
     if(document.comForm.message.value === "") {
         window.alert("Please enter your message.");
         document.comForm.message.focus();
@@ -27,18 +37,6 @@ function validateForm() {
     return true;
 }
 
-// validate Email on form
-
-function validateEmail () {
-    let email = document.comForm.email.value;
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        alert("Please enter a valid email address.");
-        document.comForm.email.focus();
-        return false;
-    }
-    return true;
-}
 
 // carousel functionality auto rotate
 let slideIndex = 0;
