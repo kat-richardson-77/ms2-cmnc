@@ -1,45 +1,57 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+// validate form
 
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("Thank you for submitting the form. We will respond within 48 hours.");
-            } else {
-                alert("nothing happened");
-            }
-        });
-
+function validateForm() {
+    if(document.comForm.yourname.value === "") {
+        window.alert("Please enter your full name.");
+        document.comForm.yourname.focus();
+        return false;
     }
-});
+    if(document.comForm.phonenumber.value === "") {
+        window.alert("Please enter your phone number.");
+        document.comForm.phonenumber.focus();
+        return false;
+    }
+    if(document.comForm.email.value === "") {
+        window.alert("Please enter your email address.");
+        document.comForm.email.focus();
+        return false;
+    }
+  // checkbox validation
+  //   if (document.comForm.)
 
-//form functionality
-
-//clear form with reset button
-
-function clearForm() {
+    if(document.comForm.message.value === "") {
+        window.alert("Please enter your message.");
+        document.comForm.message.focus();
+        return false;
+    }
+    return true;
 }
 
+// validate Email on form
 
-//email details on submit form and clear form
-function submitForm() {
-    // Get form values
-
+function validateEmail () {
+    let email = document.comForm.email.value;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        document.comForm.email.focus();
+        return false;
+    }
+    return true;
 }
 
-// carousel functionality
-// Activate the carousel
+// carousel functionality auto rotate
 let slideIndex = 0;
 showSlides();
 
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("comSlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("comSlides");
+        for (let i = 0; i < slides.length; i+=1) {
+            slides[i].style.display = "none";
+        }
+        slideIndex +=1;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); //4 seconds between slides
     }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}

@@ -60,6 +60,8 @@
     <header>
         <h1 class="display-3" id="com2">City of Manchester Netball Club</h1>
     </header>
+
+    <!--Contact us form container-->
     <div class="container">
         <h2 class="display-6">Contact us</h2>
         <!--Name and contact details for Committee members-->
@@ -67,19 +69,19 @@
         <p>Secretary - Jess Laver - Contact number 00000000000</p>
         <p>Treasurer - Katie Richardson - Contact number 0744 697 2141</p>
         <!--Contact us form with name, phone, email from, message and positions-->
-        <form class="row g-3" name="myMessageForm" action="" onsubmit="submit_form">
+        <form class="row g-3" name="comForm" action="" onsubmit="return validateForm()"  id="comForm">
             <div class="col-lg-4">
-                <label for="your-name" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="your-name" placeholder="First and Last name" >
+                <label for="yourname" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="yourname" placeholder="First and Last name" >
             </div>
             <div class="col-lg-4">
                 <label for="phonenumber" class="form-label">Phone number</label>
-                <input type="number" class="form-control" id="phonenumber" placeholder="Phone number" required>
+                <input type="number" class="form-control" id="phonenumber" placeholder="Phone number" >
                 <div id="phonenumberHelp" class="form-text">We'll never share your phone number with anyone else.</div>
             </div>
             <div class="col-lg-4">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email address" required>
+                <input type="email" class="form-control" id="email" placeholder="Email address" >
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <label>Please select the Netball positions you are interested in:</label>
@@ -137,7 +139,7 @@
             <div class="col-8">
                 <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..."
-                    required></textarea>
+                    ></textarea>
             </div>
             <div class="col-12">
                 <button type="submit" id="btnSubmit" class="btn btn-primary">Submit</button>
