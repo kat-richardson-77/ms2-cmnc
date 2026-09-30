@@ -69,6 +69,17 @@ body {
     flex: 1;
 }
 
+/*change colour of buttons*/
+.btn-outline-primary {
+    color: rgb(227, 5, 230);
+    border-color: rgb(227, 5, 230);
+}
+
+.btn-outline-secondary {
+    color: black;
+    border-color: black;
+}
+
 /*Navbar*/
 #navbar {
     background-color: black;
