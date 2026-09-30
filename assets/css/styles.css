@@ -83,7 +83,7 @@ body {
   input[type="checkbox"] {
   appearance: none;
   background-color: #fff;
-  margin: 0;
+  margin: 0.5em;
   font: inherit;
   color: rgb(227, 5, 230);
   width: 1.15em;
@@ -91,7 +91,7 @@ body {
   border: 0.15em solid rgb(227, 5, 230);
   border-radius: 0.15em;
   transform: translateY(-0.075em);
-  display: grid;
+  display: inline-grid;
   place-content: center;
 }
 
