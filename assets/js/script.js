@@ -43,7 +43,6 @@ let slideIndex = 0;
 showSlides();
 
     function showSlides() {
-        let i;
         let slides = document.getElementsByClassName("comSlides");
         for (let i = 0; i < slides.length; i+=1) {
             slides[i].style.display = "none";
