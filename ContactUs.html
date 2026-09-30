@@ -75,19 +75,19 @@
         <div class="comBox">
             <h2 class="display-6">Contact form</h2>
             <p>Please fill out the form below to contact us. We will get back to you as soon as possible.</p>
-        <form class="row g-3" name="comForm" action="" onsubmit="return validateForm()"  id="comForm">
+        <form class="row g-3" name="comForm" id="comForm"action="https://formspree.io/f/xrpbdjpj" method="POST"  onsubmit="return validateForm()"  id="comForm">
             <div class="col-lg-4">
                 <label for="yourname" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="yourname" placeholder="First and Last name" >
+                <input type="text" class="form-control" id="yourname" name="yourname" placeholder="First and Last name" >
             </div>
             <div class="col-lg-4">
                 <label for="phonenumber" class="form-label">Phone number</label>
-                <input type="number" class="form-control" id="phonenumber" placeholder="Phone number" >
+                <input type="tel" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone number" >
                 <div id="phonenumberHelp" class="form-text">We'll never share your phone number with anyone else.</div>
             </div>
             <div class="col-lg-4">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email address" >
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email address" >
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
         <br>
@@ -129,7 +129,7 @@
             <br>
             <div class="col-8">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Type your message here..."
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Type your message here..."
                     ></textarea>
             </div>
             </div>
