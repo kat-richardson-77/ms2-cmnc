@@ -37,6 +37,17 @@ function validateForm() {
     return true;
 }
 
+//Submit button functionality
+
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#my-form', formId: 'myezalkv' });
+
+
+//reset button functionality
+function resetForm() {
+    document.comForm.reset();
+}
+
 
 // carousel functionality auto rotate
 let slideIndex = 0;
